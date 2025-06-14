@@ -3,34 +3,31 @@ import path from "path";
 // Fungsi untuk mendapatkan path dari direktori penyimpanan
 const getPathStorage = () => {
   // Menggabungkan path dari direktori kerja saat ini dengan path penyimpanan dokumen
-  const pathStorage = path.join(
-    process.cwd(), 
-    process.env.STORAGE_DOCUMENT
-  );
+  const documentPath = path.join(process.cwd(), process.env.STORAGE_DOCUMENT);
 
-  const pathImage = path.join(
-    process.cwd(), 
-    process.env.STORAGE_IMAGE
-  );
+  const imagePath = path.join(process.cwd(), process.env.STORAGE_IMAGE);
 
   // Menggabungkan path dari direktori kerja saat ini dengan path penyimpanan sertifikat
-  const pathTemplate = path.join(
-    process.cwd(),
-    process.env.STORAGE_TEMPLATE
-  );
+  const pathTemplate = path.join(process.cwd(), process.env.STORAGE_TEMPLATE);
 
   const pathCmsBeranda = path.join(
     process.cwd(),
-    process.env.STORAGE_CMSBERANDA
+    process.env.STORAGE_CMSBERANDA,
   );
 
   const pathCmsArtikel = path.join(
     process.cwd(),
-    process.env.STORAGE_CMSARTIKEL
+    process.env.STORAGE_CMSARTIKEL,
   );
 
   // Mengembalikan array yang berisi path untuk dokumen dan sertifikat
-  return [pathStorage, pathTemplate, pathCmsBeranda, pathCmsArtikel, pathImage];
+  return [
+    documentPath,
+    pathTemplate,
+    pathCmsBeranda,
+    pathCmsArtikel,
+    imagePath,
+  ];
 };
 
 export default getPathStorage;
