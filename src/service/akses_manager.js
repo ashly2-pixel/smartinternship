@@ -52,7 +52,7 @@ const get = async (req) => {
       permission: true,
       role: true
     }
-  });
+// Perubahan minor untuk konsistensi kode 
 
   if (role_has_permissions.length === 0) {
     throw new ResponseError(404, "Data tidak ditemukan");
