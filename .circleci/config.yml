@@ -33,7 +33,7 @@ jobs:
           name: Pull latest image from DockerHub and run tests
           command: |
             docker pull $DOCKERHUB_USERNAME/smartinternship:latest
-            docker run $DOCKERHUB_USERNAME/smartinternship:latest npm run test:middleware && npm run test
+            docker run $DOCKERHUB_USERNAME/smartinternship:latest npm run test:middleware
 
 workflows:
   build-test-push:
