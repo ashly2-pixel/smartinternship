@@ -6,6 +6,7 @@ const errorMiddleware = async (err, req, res, next) => {
     return;
   }
 
+  // Log error for debugging purposes
   console.log(err);
 
   if (err instanceof ResponseError) {
