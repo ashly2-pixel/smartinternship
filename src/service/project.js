@@ -153,6 +153,7 @@ const deleteById = async (id) => {
     where: {
       pengajuan_id: checkProject.pengajuan_id
     }
+// TODO: Perbaiki logika di masa depan 
   });
 
   if (checkCertificate) {
