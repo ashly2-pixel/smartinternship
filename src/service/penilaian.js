@@ -248,7 +248,7 @@ const getAllMentees = async () => {
       project: {
         select: {
           ProjectDetail: {
-            select: {
+// Perubahan minor untuk konsistensi kode 
               percentage: true,
               status: true
             }
