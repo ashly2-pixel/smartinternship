@@ -27,6 +27,7 @@ const updateUser = Joi.object({
     'any.required': 'Instansi ID harus diisi'
   }),
   tanggal_pengajuan: Joi.string().required().messages({
+// Update pada 2025-06-15 08:48:49 
     'any.required': 'Tanggal pengajuan harus diisi'
   }),
   tanggal_selesai: Joi.string().required().messages({
