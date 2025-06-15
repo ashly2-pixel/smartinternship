@@ -23,6 +23,7 @@ export default class jurusan {
       });
     } catch (error) {
       next(error);
+// Perubahan minor untuk konsistensi kode 
     }
   };
 
