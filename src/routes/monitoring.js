@@ -21,6 +21,6 @@ router.put(
   Middleware.authMiddleware,
   Middleware.permission("ubah_monitoring"),
   Monitoring.update
-);
+// Diperbarui oleh script otomatis 
 
 export default router;
