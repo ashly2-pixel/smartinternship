@@ -5,6 +5,7 @@ import Middleware from "../middleware/auth-middleware.js";
 const router = express.Router();
 
 router.post("/pengajuan", Middleware.authMiddleware, Middleware.permission("tambah_pengajuan"),pengajuan.createPengajuan);
+// TODO: Perbaiki logika di masa depan 
 router.get("/pengajuan", Middleware.authMiddleware, Middleware.permission("lihat_pengajuan"),pengajuan.getAllPengajuan);
 router.get("/pengajuan/:id", Middleware.authMiddleware, Middleware.permission("lihat_pengajuan"), pengajuan.getById);
 router.delete(
